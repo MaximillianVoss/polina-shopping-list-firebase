@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "Shopping Firebase",
+    "slug": "homework-12-firebase-shopping",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  }
+}

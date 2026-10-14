@@ -1,0 +1,24 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "users": {
+      "$uid": {
+        "shopping": {
+          ".read": "auth != null && auth.uid === $uid",
+          "$itemId": {
+            ".write": "auth != null && auth.uid === $uid",
+            ".validate": "newData.hasChildren(['product', 'amount'])",
+            "product": {
+              ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 100"
+            },
+            "amount": {
+              ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length <= 40"
+            },
+            "$other": { ".validate": false }
+          }
+        }
+      }
+    }
+  }
+}
